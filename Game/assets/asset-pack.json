@@ -2,14 +2,69 @@
     "section1": {
         "files": [
             {
-                "url": "assets/dino.png",
+                "url": "assets/sprites/back1.png",
                 "type": "image",
-                "key": "dino"
+                "key": "back1"
+            },
+            {
+                "url": "assets/sprites/bgGrande.png",
+                "type": "image",
+                "key": "bgGrande"
+            },
+            {
+                "url": "assets/sprites/btn1.png",
+                "type": "image",
+                "key": "btn1"
+            },
+            {
+                "url": "assets/sprites/btn2.png",
+                "type": "image",
+                "key": "btn2"
+            },
+            {
+                "url": "assets/sprites/chick.png",
+                "type": "image",
+                "key": "chick"
+            },
+            {
+                "url": "assets/sprites/hand.png",
+                "type": "image",
+                "key": "hand"
             },
             {
                 "url": "assets/Level.js",
                 "type": "sceneFile",
                 "key": "Level"
+            },
+            {
+                "url": "assets/sprites/obj1.png",
+                "type": "image",
+                "key": "obj1"
+            },
+            {
+                "url": "assets/sprites/obj2.png",
+                "type": "image",
+                "key": "obj2"
+            },
+            {
+                "url": "assets/sprites/obj3.png",
+                "type": "image",
+                "key": "obj3"
+            },
+            {
+                "url": "assets/sprites/obj4.png",
+                "type": "image",
+                "key": "obj4"
+            },
+            {
+                "url": "assets/sprites/obj5.png",
+                "type": "image",
+                "key": "obj5"
+            },
+            {
+                "url": "assets/sprites/obj6.png",
+                "type": "image",
+                "key": "obj6"
             }
         ]
     },

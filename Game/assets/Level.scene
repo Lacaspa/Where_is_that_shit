@@ -3,31 +3,84 @@
     "sceneType": "SCENE",
     "settings": {
         "preloadPackFiles": [],
-        "sceneKey": "Level"
+        "sceneKey": "Level",
+        "borderWidth": 640,
+        "borderHeight": 960
     },
     "displayList": [
         {
             "type": "Image",
-            "id": "7d5827fd-34f6-473f-90e0-b9424a51d5fa",
-            "label": "dino",
+            "id": "305a3a31-1fb2-422b-b666-7265dcb09235",
+            "label": "bgGrande",
+            "components": [],
             "texture": {
-                "key": "dino"
+                "key": "bgGrande"
             },
-            "x": 400,
-            "y": 300
+            "y": 368,
+            "originX": 0,
+            "originY": 0
         },
         {
-            "type": "Text",
-            "id": "b2b3dbd5-2106-41fa-8a04-9b511e3401a9",
-            "label": "text_1",
-            "x": 400,
-            "y": 450,
-            "originY": 0,
-            "text": "Welcome to Phaser Editor 2D!",
-            "fontSize": "30px",
-            "fontStyle": "bold"
+            "type": "Sprite",
+            "id": "976a0d41-3d8b-431e-88b1-a9dc858b582b",
+            "label": "hand",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "hand"
+            },
+            "x": 315,
+            "y": 354,
+            "originY": 1
+        },
+        {
+            "type": "Image",
+            "id": "3150398b-3e08-4d5b-88fe-6f640611bbe4",
+            "label": "back1",
+            "components": [],
+            "texture": {
+                "key": "back1"
+            },
+            "originX": 0,
+            "originY": 0
+        },
+        {
+            "type": "Sprite",
+            "id": "5ff0bfdf-1758-4b81-b491-759eb468601a",
+            "label": "btn1",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "btn1"
+            },
+            "x": 192,
+            "y": 141
+        },
+        {
+            "type": "Sprite",
+            "id": "0112f82a-a735-4a17-8b70-bb8d33efb904",
+            "label": "btn2",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "btn2"
+            },
+            "x": 195,
+            "y": 255
+        },
+        {
+            "type": "Image",
+            "id": "9048f6b8-4328-4918-92ed-89890279f87c",
+            "label": "chick",
+            "components": [],
+            "texture": {
+                "key": "chick"
+            },
+            "x": 358,
+            "y": 183
         }
     ],
+    "plainObjects": [],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
