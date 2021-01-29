@@ -92,19 +92,19 @@ class Level extends Phaser.Scene {
 		this.btn1.setInteractive().on('pointerup',this.playf,this);
 		
 		console.log(this.scene)
-		
+		/*
 		this.scene.scene.input.on('pointerdown', function(pointer){
 			var touchX = pointer.x;
 			var touchY = pointer.y;
 			// ...
 			console.log(touchX)
 		 });
-
-		this.pointer = this.scene.input.activePointer;
+*/
+		var pointer = this.scene.scene.input.activePointer;
 		if (this.pointer.isDown) {
 			var touchX = pointer.x;
 			var touchY = pointer.y;
-			// ...
+			console.log("isDown");
 		}
 			
 	}
