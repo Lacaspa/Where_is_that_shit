@@ -53,56 +53,79 @@ class Level extends Phaser.Scene {
 	}
 	
 	/* START-USER-CODE */
+	hand_reset(){
+    // ...
+			this.tweens.add({
+			targets: this.hand,
+			y: 910,
+			x: 320,
+			ease: 'Power1',
+			duration: 1000,
+			delay: 10
+			});	
+ 		}
+		 // funcion de boton start o play
 	playf(pointer, localX, localY, event){
-		// ...
-		console.log("boton1 si\n");
-		
-		
-		//this.hand.y += 380;
-
-		var tween = this.tweens.add({
+		// mover camara hacia abajo
+	 	this.tweens.add({
 			targets: this.cameras.main,
 			y: -450,
 			ease: 'Power1',
 			duration: 3000,
 			delay: 1000
 		});
-
-		var tween2 = this.tweens.add({
+		// mover mano 
+		/* this.tweens.add({
 			targets: this.hand,
-			y: 900,
-			ease: 'Power1',
+			y: this.hand.y + 600,
+			ease: 'Power2',
 			duration: 2000,
 			delay: 2500
 		});
+		*/
 		
 			
 	}
-
+	// acciones para boton2 how to play
 	howtof(pointer, localX, localY, event){
 		// ...
 		console.log("boton2 si\n");
 	}
-
+	// metodo create
 	create(){
 		this.mycreate();
+		// inicializar parametros de la camara
 		this.cameras.main.setSize(640,1428);
 		this.cameras.main.setBounds(0,0,640,1428);
 
+		// inicializar puntero como activo
 		this.pointer = this.input.activePointer;
-		
-		
-		this.btn1.setInteractive().on('pointerup',this.playf,this);
+		// establecer boton como interactivo en on click
+		this.btn1.setInteractive().on('pointerdown',this.playf,this);
+		// include phisics to hand
 		
 	}
 
 	update(){
 		
 		if (this.pointer.isDown) {
+			// almacenar valores de puntero
 			var touchX = this.pointer.x;
 			var touchY = this.pointer.y;
-			console.log(touchX);
+			// mover mano a dichos valores de puntero
+			this.tweens.add({
+			targets: this.hand,
+			y: touchY+450,
+			x: touchX,
+			ease: 'Power1',
+			duration: 500,
+			delay: 10
+			});
 		}
+	// en off click la mano vuelve a su origen
+	this.scene.scene.input.on('pointerup', this.hand_reset,this);
+		
+
 	}
 
 	// Write your code here.
