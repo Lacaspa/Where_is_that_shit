@@ -8,6 +8,8 @@ class Level extends Phaser.Scene {
 	constructor() {
 		super("Level");
 		
+		/** @type {Phaser.GameObjects.Image} */
+		this.bgGrande;
 		/** @type {Phaser.GameObjects.Sprite} */
 		this.hand;
 		/** @type {Phaser.GameObjects.Sprite} */
@@ -16,20 +18,19 @@ class Level extends Phaser.Scene {
 		this.btn2;
 		
 		/* START-USER-CTR-CODE */
+	
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
 	
-	create() {
-		//Camera
-		var camera = scene.camera.add(0,0,640,960);
+	mycreate() {
 		
 		// bgGrande
 		const bgGrande = this.add.image(0, 368, "bgGrande");
 		bgGrande.setOrigin(0, 0);
 		
 		// hand
-		const hand = this.add.sprite(315, 354, "hand");
+		const hand = this.add.sprite(320, 334, "hand");
 		hand.setOrigin(0.5, 1);
 		
 		// back1
@@ -45,25 +46,69 @@ class Level extends Phaser.Scene {
 		// chick
 		this.add.image(358, 183, "chick");
 		
+		this.bgGrande = bgGrande;
 		this.hand = hand;
-		this.play_btn = btn1;
-		this.howto_btn = btn2;
-
-		this.play_btn.setInteractive().on('pointerup',this.playf);
-
-		this.howto_btn.setInteractive().on('pointerup',this.howtof);
+		this.btn1 = btn1;
+		this.btn2 = btn2;
 	}
 	
 	/* START-USER-CODE */
 	playf(pointer, localX, localY, event){
 		// ...
 		console.log("boton1 si\n");
-		this.game.
+		
+		
+		//this.hand.y += 380;
+
+		var tween = this.tweens.add({
+			targets: this.cameras.main,
+			y: -450,
+			ease: 'Power1',
+			duration: 3000,
+			delay: 1000
+		});
+
+		var tween2 = this.tweens.add({
+			targets: this.hand,
+			y: 900,
+			ease: 'Power1',
+			duration: 2000,
+			delay: 2500
+		});
+		
+			
 	}
+
 	howtof(pointer, localX, localY, event){
 		// ...
 		console.log("boton2 si\n");
 	}
+
+	create(){
+		this.mycreate();
+		this.cameras.main.setSize(640,1428);
+		this.cameras.main.setBounds(0,0,640,1428);
+		
+		this.btn1.setInteractive().on('pointerup',this.playf,this);
+		
+		console.log(this.scene)
+		
+		this.scene.scene.input.on('pointerdown', function(pointer){
+			var touchX = pointer.x;
+			var touchY = pointer.y;
+			// ...
+			console.log(touchX)
+		 });
+
+		this.pointer = this.scene.input.activePointer;
+		if (this.pointer.isDown) {
+			var touchX = pointer.x;
+			var touchY = pointer.y;
+			// ...
+		}
+			
+	}
+
 	// Write your code here.
 
 	/* END-USER-CODE */

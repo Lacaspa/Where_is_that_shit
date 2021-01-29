@@ -3,15 +3,17 @@
     "sceneType": "SCENE",
     "settings": {
         "preloadPackFiles": [],
+        "createMethodName": "mycreate",
         "sceneKey": "Level",
         "borderWidth": 640,
-        "borderHeight": 960
+        "borderHeight": 1428
     },
     "displayList": [
         {
             "type": "Image",
             "id": "305a3a31-1fb2-422b-b666-7265dcb09235",
             "label": "bgGrande",
+            "scope": "CLASS",
             "components": [],
             "texture": {
                 "key": "bgGrande"
@@ -29,8 +31,8 @@
             "texture": {
                 "key": "hand"
             },
-            "x": 315,
-            "y": 354,
+            "x": 320,
+            "y": 334,
             "originY": 1
         },
         {

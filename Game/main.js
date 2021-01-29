@@ -9,10 +9,17 @@ window.addEventListener('load', function () {
 		scale: {
 			mode: Phaser.Scale.FIT,
 			autoCenter: Phaser.Scale.CENTER_BOTH
+		},
+		input: {
+			activePointers: 3
 		}
 	});
 	
+
 	game.scene.add("Boot", Boot, true);
+
+
+
 
 });
 
@@ -26,6 +33,8 @@ class Boot extends Phaser.Scene {
 	create() {
 		
 		this.scene.start("Level");
+
 	}
+
 
 }
