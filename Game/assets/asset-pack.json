@@ -2,6 +2,20 @@
     "section1": {
         "files": [
             {
+                "url": [
+                    "assets/components/AnimationKillOnComplete.js",
+                    "assets/components/CharacterMove.js",
+                    "assets/components/ControllerButton.js",
+                    "assets/components/EventComponent.js",
+                    "assets/components/FixedToCamera.js",
+                    "assets/components/Physics.js",
+                    "assets/components/PhysicsBody.js",
+                    "assets/components/StartAnimation.js"
+                ],
+                "type": "scripts",
+                "key": "EventComponent"
+            },
+            {
                 "url": "assets/sprites/back1.png",
                 "type": "image",
                 "key": "back1"
@@ -65,6 +79,11 @@
                 "url": "assets/sprites/obj6.png",
                 "type": "image",
                 "key": "obj6"
+            },
+            {
+                "url": "assets/prefab/PrefbObject.js",
+                "type": "script",
+                "key": "PrefbObject"
             }
         ]
     },

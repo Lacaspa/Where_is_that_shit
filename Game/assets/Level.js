@@ -46,6 +46,10 @@ class Level extends Phaser.Scene {
 		// chick
 		this.add.image(358, 183, "chick");
 		
+		// prefbObject
+		const prefbObject = new PrefbObject(this, 135, 508);
+		this.add.existing(prefbObject);
+		
 		this.bgGrande = bgGrande;
 		this.hand = hand;
 		this.btn1 = btn1;

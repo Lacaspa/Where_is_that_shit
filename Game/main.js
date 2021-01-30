@@ -12,6 +12,13 @@ window.addEventListener('load', function () {
 		},
 		input: {
 			activePointers: 3
+		},
+		physics: {
+			default: "arcade",
+			arcade: {
+				debug: true,
+				gravity: {y: 100}				
+			}			
 		}
 	});
 	
